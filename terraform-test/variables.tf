@@ -8,14 +8,11 @@ variable "gcp_region" {
   default = "us-east4"
 }
 
+//variaveis intancia 1
+
 variable "gcp_zone1" {
   description = "Zona 1 GCP"
   default = "us-east4-a"
-}
-
-variable "gcp_zone2" {
-  description = "Zona 2 GCP"
-  default = "us-east4-b"
 }
 
 variable "machine_type1" {
@@ -23,19 +20,9 @@ variable "machine_type1" {
   default = "n1-standard-1"
 }
 
-variable "machine_type2" {
-  description = "Tipo de máquina"
-  default = "e2-standard-2"
-}
-
 variable "instance_name1" {
   description = "Nome da instância"
   default = "chapter1-instance"
-}
-
-variable "instance_name2" {
-  description = "Nome da instância"
-  default = "chapter2-instance"
 }
 
 variable "image" {
@@ -51,6 +38,24 @@ variable "fw_name1" {
 variable "ports_cp1" {
   description = "portas"
   default = ["80"]
+}
+
+
+//variaveis intancia 2
+
+variable "gcp_zone2" {
+  description = "Zona 2 GCP"
+  default = "us-east4-b"
+}
+
+variable "machine_type2" {
+  description = "Tipo de máquina"
+  default = "e2-standard-2"
+}
+
+variable "instance_name2" {
+  description = "Nome da instância"
+  default = "chapter2-instance"
 }
 
 variable "fw_name2" {
