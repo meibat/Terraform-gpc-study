@@ -18,6 +18,11 @@ variable "image" {
   default = "ubuntu-1804-bionic-v20210928"
 }
 
+variable "ports" {
+  description = "portas"
+  default = ["80", "443"]
+}
+
 //variaveis intancia 1
 
 variable "gcp_zone1" {
@@ -40,11 +45,6 @@ variable "fw_name1" {
   default = "chapter1-firewall"
 }
 
-variable "ports" {
-  description = "portas"
-  default = ["80", "443"]
-}
-
 //variaveis intancia 2
 
 variable "gcp_zone2" {
@@ -65,9 +65,4 @@ variable "instance_name2" {
 variable "fw_name2" {
   description = "nome do firewall"
   default = "chapter2-firewall"
-}
-
-variable "ports_cp2" {
-  description = "portas"
-  default = ["80", "220"]
 }
