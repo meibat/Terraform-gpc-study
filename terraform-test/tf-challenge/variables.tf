@@ -40,7 +40,7 @@ variable "fw_name1" {
   default = "chapter1-firewall"
 }
 
-variable "ports_cp1" {
+variable "ports" {
   description = "portas"
   default = ["80", "443"]
 }

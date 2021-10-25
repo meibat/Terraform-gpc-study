@@ -28,6 +28,6 @@ resource "google_compute_firewall" "cp1_firewall" {
   network = google_compute_network.vpc.name
   allow {
     protocol = "tcp"
-    ports = "${var.ports_cp1}"
+    ports = "${var.ports}"
   }
 }
