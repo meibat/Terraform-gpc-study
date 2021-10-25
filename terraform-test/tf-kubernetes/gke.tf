@@ -12,7 +12,6 @@ variable "gke_num_nodes" {
 resource "google_container_cluster" "test_cluster" {
   name = sensitive("${var.project_id}-gke")
   location = var.region
-  zone = ""
 
   remove_default_node_pool = true
   initial_node_count = 1
@@ -22,7 +21,7 @@ resource "google_container_cluster" "test_cluster" {
 
 }
 
-//Node Pool gerenciuado separadamente
+//Node Pool gerenciado separadamente
 resource "google_container_node_pool" "nodes_primarios" {
   name = "${google_container_cluster.test_cluster.name}-node-pool"
   location = var.region
