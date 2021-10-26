@@ -12,6 +12,11 @@ IAC em Terraform criados a partir do terceiro desafio do meu estágio na Tenda.
 - tf-challenge: desafio principal, criar uma infraestrutura com o Terraform, contendo 1 vpc com subrede em us-east4, 2 instâncias e 1 regra de firewall 80/443:
     - 1 instância com Ubuntu na zona us-east4-a.
     - 1 instância com Ubuntu na zona us-east4-b.
+#
+
+<img src="Fluxograma-Desafio3.png">
+
+#
 
 - tf-kubernetes: experimentos com Kubernetes e Terraform.
 
