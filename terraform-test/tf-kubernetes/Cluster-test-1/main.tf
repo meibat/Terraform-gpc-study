@@ -5,7 +5,7 @@ provider "google" {
 }
 
 
-resource "google_container_cluster" "test" {
+resource "google_container_cluster" "cluster-test-1" {
   name        = var.name
   project     = var.project
   description = "Test GKE Cluster"
@@ -22,7 +22,7 @@ resource "google_container_node_pool" "node" {
   name       = "${var.name}-node-pool"
   project    = var.project
   location   = var.location
-  cluster    = google_container_cluster.test.name
+  cluster    = google_container_cluster.cluster-test-1.name
   node_count = 1
 
   node_config {

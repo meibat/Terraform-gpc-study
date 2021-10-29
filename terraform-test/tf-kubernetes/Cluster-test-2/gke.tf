@@ -1,21 +1,21 @@
 //Cluster GKE
-resource "google_container_cluster" "test_cluster" {
-  name = sensitive("${var.project_id}-gke")
+resource "google_container_cluster" "cluster-test-2" {
+  name = sensitive("${var.project_id}-test-2")
   location = var.region
 
   remove_default_node_pool = true
   initial_node_count = 1
 
-  network = google_compute_network.vpc.name
-  subnetwork = google_compute_subnetwork.subnet.name
+  network = google_compute_network.vpc-2.name
+  subnetwork = google_compute_subnetwork.subnet-2.name
 
 }
 
 //Node Pool gerenciuado separadamente
 resource "google_container_node_pool" "nodes_primarios" {
-  name = "${google_container_cluster.test_cluster.name}-node-pool"
+  name = "${google_container_cluster.cluster-test-2.name}-node-pool"
   location = var.region
-  cluster = google_container_cluster.test_cluster.name
+  cluster = google_container_cluster.cluster-test-2.name
   node_count = var.gke_num_nodes
 
   node_config {
@@ -29,7 +29,7 @@ resource "google_container_node_pool" "nodes_primarios" {
     }
 
     machine_type = "e2-standard-2"
-    tags = [ "gke-node", sensitive("${var.project_id}-gke") ]
+    tags = [ "gke-node", sensitive("${var.project_id}-test-2") ]
     metadata = {
       disable-legacy-endpoints = "true"
     }

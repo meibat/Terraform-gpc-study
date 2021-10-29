@@ -1,5 +1,5 @@
 variable "name" {
-  default = "cluster-test"
+  default = "cluster-test-1"
 }
 
 variable "project" {
