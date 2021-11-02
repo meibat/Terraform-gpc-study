@@ -20,7 +20,7 @@ variable "image" {
 
 variable "ports" {
   description = "portas"
-  default = ["80", "443"]
+  default = ubuntu-1804-bionic-v20210928
 }
 
 //variaveis intancia 1

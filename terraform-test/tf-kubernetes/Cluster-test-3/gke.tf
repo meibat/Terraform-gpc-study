@@ -8,7 +8,6 @@ resource "google_container_cluster" "cluster-test-3" {
 
   network = google_compute_network.vpc-3.name
   subnetwork = google_compute_subnetwork.subnet-3.name
-
 }
 
 //Node Pool gerenciuado separadamente
@@ -19,6 +18,8 @@ resource "google_container_node_pool" "nodes_primarios" {
   cluster = google_container_cluster.cluster-test-3.name
   node_count = var.gke_num_nodes
 
+  instance_group_urls = [google_compute_instance.Instance-cluster3.instance_id]
+
   node_config {
     oauth_scopes = [
         "https://www.googleapis.com/auth/logging.write",
@@ -28,8 +29,7 @@ resource "google_container_node_pool" "nodes_primarios" {
     labels = {
       env = sensitive(var.project_id)
     }
-
-    machine_type = "e2-standard-2"
+    
     tags = [ "gke-node", sensitive("${var.project_id}-test-3") ]
     metadata = {
       disable-legacy-endpoints = "true"
