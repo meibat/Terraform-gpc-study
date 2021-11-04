@@ -9,7 +9,7 @@ variable "gcp_region" {
 }
 
 variable "key_path" {
-  description = "value"
+  description = "Credencials"
   default = "terraform-gcp-credencials.json"
 }
 
