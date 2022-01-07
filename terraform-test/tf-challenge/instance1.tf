@@ -17,7 +17,7 @@ resource "google_compute_instance" "chapter1" {
     network = google_compute_network.vpc.name
     subnetwork = google_compute_subnetwork.subnet-1.name
     access_config {
-      
+
     }
   }
 }
@@ -30,4 +30,6 @@ resource "google_compute_firewall" "cp1_firewall" {
     protocol = "tcp"
     ports = "${var.ports}"
   }
+
+  source_tags = ["web"]
 }

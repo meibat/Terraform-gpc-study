@@ -30,4 +30,6 @@ resource "google_compute_firewall" "cp2_firewall" {
     protocol = "tcp"
     ports = "${var.ports}"
   }
+
+    source_tags = ["web"]
 }

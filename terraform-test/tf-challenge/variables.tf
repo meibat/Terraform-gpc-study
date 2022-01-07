@@ -20,14 +20,14 @@ variable "image" {
 
 variable "ports" {
   description = "portas"
-  default = ubuntu-1804-bionic-v20210928
+  default = ["80", "443"]
 }
 
 //variaveis intancia 1
 
 variable "gcp_zone1" {
   description = "Zona 1 GCP"
-  default = "us-east4-a"
+  default = "us-east4-c"
 }
 
 variable "machine_type1" {
