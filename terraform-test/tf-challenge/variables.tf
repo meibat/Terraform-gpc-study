@@ -1,6 +1,6 @@
 variable "gcp_project_id" {
   description = "ID do project GCP"
-  default = "terraform-gcp-329700"
+  default = "terraform-gcp-000000"
 }
 
 variable "gcp_region" {
