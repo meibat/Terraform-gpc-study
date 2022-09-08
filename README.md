@@ -1,5 +1,5 @@
 # Terraform-gpc-study
-IAC em Terraform criados a partir do terceiro desafio do meu estágio na Tenda.
+IAC em Terraform.
 
 ## Requisitos:
 - Terraform
