@@ -7,7 +7,7 @@ variable "gke_num_nodes" {
 }
 
 variable "project_id" {
-  default = "terraform-gcp-329700"
+  default = "terraform-gcp-000000"
 }
 
 variable "region" {
