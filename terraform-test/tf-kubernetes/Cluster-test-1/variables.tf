@@ -3,7 +3,7 @@ variable "name" {
 }
 
 variable "project" {
-  default = "terraform-gcp-329700"
+  default = "terraform-gcp-000000"
 }
 
 variable "key_path" {
