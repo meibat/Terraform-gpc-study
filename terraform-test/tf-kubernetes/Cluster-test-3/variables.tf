@@ -1,7 +1,7 @@
 variable "key_path" {
   default = "terraform-gcp-credencials.json"
 }
-
+//
 variable "gke_num_nodes" {
   default = 1
 }
