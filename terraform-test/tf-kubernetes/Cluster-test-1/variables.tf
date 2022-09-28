@@ -1,7 +1,7 @@
 variable "name" {
   default = "cluster-test-1"
 }
-
+//
 variable "project" {
   default = "terraform-gcp-000000"
 }
