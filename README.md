@@ -1,9 +1,17 @@
 # Terraform-gpc-study
-IAC em Terraform.
+Infra As Code em Terraform.
+
+## Por que esse repositório está Público
+Recomendo a todos que estão ainda no começo de sua trajetória se aprofundar o máximo possível nos fundamentos de lógica de programação, pois será sua base em tudo que fará na sua jornada de programação. Por esse motivo mantenho todos os meus repositórios de estudo abertos para quem quiser utilizar como base em seus estudos. 
+
+## Lembre-se: 
+Saber a linguagem não é tão importante quanto saber como usá-la para resolver problemas.
 
 ## Requisitos:
 - Terraform
 - Plataforma Cloud: GCP
+
+# Estrutura do Repositório:
 
 ## terraform-Conceito
 - Estruturas bases do Terraform.
